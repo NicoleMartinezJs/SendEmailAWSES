@@ -1,0 +1,32 @@
+﻿@model EmailModel
+@{
+    ViewBag.Title = "Contact us";
+}
+
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <br />
+            <fieldset>
+                <legend align="Center" style="font-weight:bold">Contact us</legend>
+                <form asp-action="SendEmail" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input type="text" asp-for="Name" class="form-control" required />
+                    </div><div class="form-group">
+                        <label class="control-label">Your email</label>
+                        <input asp-for="Subject" class="form-control" required autocomplete="off"/>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Message" class="control-label"></label>
+                        <textarea asp-for="Message" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Send" class="btn btn btn-primary btn-sm btn-block" />
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+    
+
+
